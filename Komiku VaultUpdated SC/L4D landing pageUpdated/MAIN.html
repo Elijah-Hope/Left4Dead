@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komikku vault</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <img src="logo.png" alt="Library Logo" class="logo">
+        <a href="student.html">My Account</a>
+        <a href="#home">Home</a>
+        <a href="Categories.html">Categories</a>
+        <a href="#books">Books</a>
+        <a href="#about">About</a>
+        <a href="logIn/LogInPage.html">Log-out</a>
+     
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-text">
+                <h1><i>Welcome to Komikku vault</i></h1>
+                <p>Enjoy Classic and Trending books online.</p>
+                <a href="student.html" class="btn btn-dark-hover">Order now!</a>
+            </div>
+            <div class="hero-image-container">
+                <img src="logo.png" alt="Logo" class="hero-image">
+            </div>
+        </section>
+
+
+       
+        <div class="book-container" id="books">
+            <h2>Popular Books</h2>
+            <div class="book-section">
+                <div class="book-card">
+                    <img src="MCategory1_pics/Pokemon.jpg" alt="Book 1">
+                    <h3>Pokemon</h3>
+                    <p>by Satoshi Taijiri</p>
+                    <p class="book-price">18 Chapters</p>
+                    <button class="add-to-cart">Pre Order</button>
+                </div>
+   
+                <div class="book-card">
+                    <img src="One Piece.jpg" alt="Book 2">
+                    <h3>One Piece</h3>
+                    <p>by Eiichiro Oda</p>
+                    <p class="book-price">13 Chapters</p>
+                    <button class="add-to-cart">Pre Order</button>
+                </div>
+   
+                <div class="book-card">
+                    <img src="Dragon Ball.jpg" alt="Book 3">
+                    <h3>Dragon Ball</h3>
+                    <p>by Akira Toriyama</p>
+                    <p class="book-price">12 Chapters</p>
+                    <button class="add-to-cart">Pre Order</button>
+                </div>
+   
+                <div class="book-card">
+                    <img src="Soul Eater.jpg" alt="Book 4">
+                    <h3>Soul Eater</h3>
+                    <p>by Atsushi Ohkubo</p>
+                    <p class="book-price">113 Chapters</p>
+                    <button class="add-to-cart">Pre Order</button>
+                </div>
+   
+                <div class="book-card">
+                    <img src="Case Closed.jpg" alt="Book 5">
+                    <h3>Case Closed</h3>
+                    <p>by Gosho Aoyama</p>
+                    <p class="book-price">113 Chapters</p>
+                    <button class="add-to-cart">Pre Order</button>
+                </div>
+            </div>
+        </div>
+   
+        <!-- About Section -->
+<section class="about-section" id="about">
+    <h2>Why Choose Komikku vault?</h2>
+    <div class="about-container">
+        <div class="about-card">
+            <div class="about-header">
+                <span class="about-star"></span> <strong>Functionality</strong>
+            </div>
+            <p>Komikku Vault is an online hub for manga lovers, offering both classic and modern titles in one place. 
+                Our mission is to make manga more accessible while building a community that shares the same passion for storytelling.</p>
+        </div>
+
+
+        <div class="about-card">
+            <div class="about-header">
+                <span class="about-star"></span> <strong>Usability</strong>
+            </div>
+            <p>Our platform is designed for easy navigation, with clear categories, smart search, and personalized recommendations.
+                 Whether on desktop or mobile, Komikku Vault ensures a smooth and enjoyable user experience.</p>
+        </div>
+
+
+        <div class="about-card">
+            <div class="about-header">
+                <span class="about-star"></span> <strong>Security</strong>
+            </div>
+            <p>We prioritize your safety by using SSL encryption, secure payments, and strict data protection measures. Your personal information and transactions are always kept private and secure with us.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+        <!-- Footer -->
+        <section id="contact">
+            <footer class="footer">
+                <p>&copy; 2025 Komikku vault. All rights reserved.</p>
+                <p>
+                    <a href="#">Privacy Policy</a> |
+                    <a href="#">Terms of Service</a> |
+                    <a href="mailto:support@komikkuvault.com">Contact Us</a>
+                </p>
+            </footer>
+        </section>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const borrowButtons = document.querySelectorAll('.add-to-cart');
+   
+            borrowButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const bookCard = this.closest('.book-card');
+                    const bookTitle = bookCard.querySelector('h3').innerText;
+   
+                    const confirmBorrow = confirm(`Send pre order request for "${bookTitle}"?`);
+   
+                    if (confirmBorrow) {
+                        alert('Your request has been sent.');
+                        this.innerText = 'Pending';
+                        this.disabled = true;
+                        this.style.backgroundColor = '#999';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

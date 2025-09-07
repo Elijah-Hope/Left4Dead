@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Dark Demon Theme</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0a0a0a;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      background-color: #111;
+      border-bottom: 1px solid #1f1f1f;
+    }
+
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #d10000;
+    }
+
+
+    nav a {
+      margin: 0 1rem;
+      color: #aaa;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+
+    nav a:hover {
+      color: #ff3333;
+    }
+
+
+    .auth-buttons button {
+      margin-left: 1rem;
+      padding: 0.5rem 1.2rem;
+      border: none;
+      border-radius: 20px;
+      background-color: #220000;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+
+    .auth-buttons button:hover {
+      background-color: #7a0000;
+    }
+
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background-color: #0a0a0a;
+    }
+
+
+    .form-container {
+      background-color: #111;
+      padding: 2.5rem 3rem;
+      border-radius: 15px;
+      box-shadow: 0 0 100px rgba(255, 0, 0, 0.1);
+      width: 100%;
+      max-width: 450px;
+    }
+
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #ff1a1a;
+    }
+
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+
+    .form-group input {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #1a1a1a;
+      border: 1px solid #330000;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+
+    .form-actions {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+
+    .form-actions button {
+      width: 100%;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 20px;
+      background-color: #b30000;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+
+    .form-actions button:hover {
+      background-color: #ff1a1a;
+    }
+
+
+    .form-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+
+    .form-footer a {
+      color: #cc4444;
+      text-decoration: none;
+    }
+
+
+    .form-footer a:hover {
+      text-decoration: underline;
+    }
+
+
+    .top-text {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+
+    .top-text a {
+      color: #cc4444;
+      text-decoration: none;
+    }
+
+
+    .top-text a:hover {
+      text-decoration: underline;
+    }
+
+
+    @media (max-width: 500px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+
+      nav {
+        margin-top: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <header>
+    <div class="logo">komikku Vault</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About</a>
+    </nav>
+    <div class="auth-buttons">
+      <button>Sign In</button>
+      <button>Log In</button>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="form-container">
+      <div class="top-text">
+        Don't have an account? <a href="SignUpPage.html">Sign Up</a>
+      </div>
+      <h2>Login</h2>
+      <form>
+        <div class="form-group">
+          <input type="email" placeholder="Email" required />
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" required />
+        </div>
+        <div class="form-footer">
+          <label><input type="checkbox"> Remember Me</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+
+</body>
+</html>
